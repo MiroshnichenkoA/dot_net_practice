@@ -9,7 +9,7 @@ namespace Project
             System.TimeSpan t1 = DateTime.Now.TimeOfDay;
 
             int h = t1.Hours;
-                int h1 = (int)h;
+                int h1 = (int)h; //запуталась в переменных типа и не было времени удалить, введение переменной h1 было не нужным
 
             if (h1 >= 9 && h1 < 12) Console.WriteLine("Good morning,guys!");
             else if (h1 >= 12 && h1 < 15) Console.WriteLine("Good day,guys!");
