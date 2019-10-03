@@ -8,6 +8,7 @@ namespace Project
         {
             int[] firstmassive = CreateEmptyMussive();
             string[] = CreateNewMussive();
+            int[] = MaxNum();
         }
         static void CreateEmptyMussive(string[] args)
         {
@@ -27,6 +28,16 @@ namespace Project
             newMassive[0] = Convert.ToString(number);
             newMassive[2] = "txt, guys!";
             Console.WriteLine(newMassive[0], newMassive[1], newMassive[2]);
+        }
+        static void MaxNum(string[] args)
+        {
+        int[] massive = int[13] { };
+            for (int i = 0; i < massive.Length; i++)
+            {
+                Random fortuna = new Random();
+                massive[i] = fortuna.Next();
+                Console.WriteLine(massive[i]);
+            }
         }
     }
 }
