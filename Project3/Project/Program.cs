@@ -6,32 +6,44 @@ namespace Project
     {
         static void Main(string[] args)
         {
-            int[] firstmassive = CreateEmptyMussive();
-            string[] = CreateNewMussive();
-            int[] = MaxNum();
+            Console.WriteLine("Пустой массив:");
+            CreateEmptyMussive();
+            Console.WriteLine("Новый массив:");
+            CreateNewMussive();
+            Console.WriteLine("Третий массив:");
+            MaxNum();
         }
-        static void CreateEmptyMussive(string[] args)
+        static void CreateEmptyMussive()
         {
-            int[] emptyMassive = { }; //массив заполнится дефолтными значениями 0, чисто технически он не пустой, но математически вроде и пустой
+            int[] emptyMassive = {}; //не заполнился ничем, потому что нет у него размерности
+            for (int i = 0; i < emptyMassive.Length; i++)
+            {
+                Console.WriteLine(emptyMassive[i]);
+            }
         }
-        static void CreateNewMussive(string[] args)
+        static void CreateNewMussive()
         {
             string[] newMassive = new string[3];
             int number = 32;
             string txt = "Hello";
             newMassive[0] = Convert.ToString(number);
             newMassive[1] = Convert.ToString('\u0041');
-            newMassive[2] = "txt";
-            Console.WriteLine(newMassive[0], newMassive[1], newMassive[2]);
-
+            newMassive[2] = txt;
+            for (int i = 0; i < newMassive.Length; i++)
+            {
+                Console.WriteLine(newMassive[i]);
+            }
             number = number + 10;
             newMassive[0] = Convert.ToString(number);
-            newMassive[2] = "txt, guys!";
-            Console.WriteLine(newMassive[0], newMassive[1], newMassive[2]);
+            newMassive[2] = $"{txt}, guys!";
+            for (int i = 0; i < newMassive.Length; i++)
+            {
+                Console.WriteLine(newMassive[i]);
+            }
         }
-        static void MaxNum(string[] args)
+        static void MaxNum()
         {
-        int[] massive = int[13] { };
+        int[] massive = new int[13];
             for (int i = 0; i < massive.Length; i++)
             {
                 Random fortuna = new Random();
