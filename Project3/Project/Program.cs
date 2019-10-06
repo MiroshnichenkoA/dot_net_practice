@@ -50,6 +50,12 @@ namespace Project
                 massive[i] = fortuna.Next();
                 Console.WriteLine(massive[i]);
             }
+        int maxNum = int.MinValue;
+            for (int i = 0; i < massive.Length; i++)
+            {
+                if (massive[i] > maxNum) maxNum = massive[i];
+            }
+            Console.WriteLine($"Максимальное значение данного массива: {maxNum}");
         }
     }
 }
