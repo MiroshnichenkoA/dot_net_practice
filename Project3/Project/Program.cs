@@ -12,6 +12,8 @@ namespace Project
             CreateNewMussive();
             Console.WriteLine("Третий массив:");
             MaxNum();
+            Console.WriteLine("Упаковка/распаковка:");
+            Boxing();
         }
         static void CreateEmptyMussive()
         {
@@ -56,6 +58,13 @@ namespace Project
                 if (massive[i] > maxNum) maxNum = massive[i];
             }
             Console.WriteLine($"Максимальное значение данного массива: {maxNum}");
+        }
+        static void Boxing()
+        {
+            short variableForBoxing = 10;
+            object variableBoxed = variableForBoxing;
+            System.SByte variableUnboxed = (SByte)(short)variableBoxed;
+            Console.WriteLine($"Значение переменной {variableUnboxed}, тип переменной {variableUnboxed.GetType()}");
         }
     }
 }
