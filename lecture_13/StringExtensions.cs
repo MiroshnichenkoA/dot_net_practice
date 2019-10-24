@@ -9,13 +9,13 @@ namespace lecture_13
         public static string CutString(this String stringUser)
         {
             string[] splited = stringUser.Split();
-            string[] newString; 
-            for (int i = 0; i < splited[5]; i++)
+            string[] newString = new string[5]; 
+            for (int i = 0; i < 5; i++)
             {
-                newString[i] = splited[i];
+                newString[i]= splited[i];
             }
-            string newString = String.Join(, newString);
-            return newString;
+            string newString2 = String.Join("", newString);
+            return newString2;
         }
     }
 }
