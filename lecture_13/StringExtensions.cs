@@ -6,9 +6,16 @@ namespace lecture_13
 {
    static class StringExtensions
     {
-        public static void CutString(this String string)
+        public static string CutString(this String stringUser)
         {
-            string new = string.
+            string[] splited = stringUser.Split();
+            string[] newString; 
+            for (int i = 0; i < splited[5]; i++)
+            {
+                newString[i] = splited[i];
+            }
+            string newString = String.Join(, newString);
+            return newString;
         }
     }
 }
